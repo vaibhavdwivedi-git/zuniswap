@@ -8,10 +8,8 @@ describe("Token", () => {
     [owner] = await ethers.getSigners();
 
     const Token = await ethers.getContractFactory("Token");
-
     token = await Token.deploy("Test Token", "TKN", 31337);
-
-    await token.deployed;
+    await token.deployed();
   });
 
   it("sets name and symbol when created", async () => {
